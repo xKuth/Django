@@ -14,7 +14,10 @@
     </style>
 </head>
 <body>
-    <h1>Learning log</h1>
-    <p>Essa aplicação te ajudará a organizar seus estudos</p>
+    {% extends "learning_logs/base.html" %}
+
+    {% block content %}
+        <p>Essa aplicação te ajudará a organizar seus estudos</p>
+    {% endblock content %}
 </body>
 </html>
