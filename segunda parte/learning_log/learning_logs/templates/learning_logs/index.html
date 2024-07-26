@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro site em Django</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        p, h1 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    {% extends "learning_logs/base.html" %}
+
+    {% block content %}
+        <p>Essa aplicação te ajudará a organizar seus estudos</p>
+    {% endblock content %}
+</body>
+</html>
