@@ -13,8 +13,8 @@ def login(request):
     else:
         form = LoginForm(data=request.POST)
         if form.is_valid():
-            # username = request.POST.get('username')
-            # password = request.POST.get('password')
+            # Nome Padrão é: username = request.POST.get('username')
+            # Senha Padrão é: password = request.POST.get('password')
             username = request.POST.get('login')
             password = request.POST.get('senha')
             user = authenticate(username=username, password=password)
