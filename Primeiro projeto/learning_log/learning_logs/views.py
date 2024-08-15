@@ -90,4 +90,14 @@ def edit_entry(request, entry_id):
     context = {'entry': entry, 'topic': topic, 'form': form}
     return render(request, 'learning_logs/edit_entry.html', context)
 
+def delete_entry(request, entry_id):
+    entry = Entry.objects.get(id=entry_id)
+    if topic.owner != request.user:
+        raise Http404
+    if request.method != 'POST':
+        return HttpResponseRedirect(reverse('topics', args=[topic.id]))
+    entry.delete(entry)
+    return render(request, 'learning_logs/topic.html')
+
+
 

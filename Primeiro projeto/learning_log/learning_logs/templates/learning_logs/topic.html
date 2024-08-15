@@ -23,7 +23,10 @@
                             <h3>
                                 {{ entry.date_added | date:'M d, Y H:i'}}
                                 <small>
-                                    <a href="{% url 'edit_entry' entry.id %}">Editar anotação
+                                    <a href="{% url 'edit_entry' entry.id %}">Editar anotação</a>
+                                </small>
+                                <small style="padding-left: 28%;">
+                                    <a href="{%url 'delete_entry'%}">Exluir anotação</a>
                                 </small>
                             </h3>  
                         </div>
