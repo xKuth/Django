@@ -12,8 +12,6 @@ from django.core.exceptions import ValidationError
 class LoginForm(forms.Form):
     login = forms.CharField(max_length=30)
     senha = forms.CharField(max_length=30, widget=(forms.PasswordInput))
-
-
     # Seu eu precisar pegar dois campos ao memo tempo ou mais 
     # Ultiliza a função clean da seguinte maneira
     """Def clean(self)
